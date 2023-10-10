@@ -4,45 +4,34 @@
 using AlgorithimsDataStructures.ADT;
 using AlgorithimsDataStructures;
 using System.Collections;
+using AlgorithimsDataStructures.LinkedList;
 
 Stack ts = new Stack();
 
 Pokemon squirtle = new Pokemon();
 
-// Inserting at the End of an Array
-int[] intArray = new int[10];
+int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-// make a variable to keep the length because .Length is based off capacity
-// and does not track the actual index
-int length = 0;
-
-// this adds data for us
-for (int i = 0; i < 8; i++)
-{
-    intArray[length] = i;
-    length++;
-}
-
-// for inserting to the end
-//intArray[length] = 8;
-//length++;
-
-// inserting at the start of an array
-
-//for(int i =3; i >= 0; i--)
-//{
-//    // this is moving all the values
-//    intArray[i+1] = intArray[i];
-
-//}
-//intArray[0] = 20;
-//length++;
+//Key means what value we are searching for
 
 
-for (int i = length; i>=2; i--)
-{
-    //shifting each one position
-    intArray[i+1] = intArray[i];
-}
+// Linked-List
 
-intArray[2] = 8;
+LinkedList linkedList = new LinkedList();
+
+linkedList.InsertHead(1);
+linkedList.InsertHead(2);
+linkedList.InsertHead(3);
+linkedList.InsertHead(4);
+
+linkedList.DeleteFirst();
+
+linkedList.DeleteFirst();
+
+linkedList.InsertLast(7);
+linkedList.InsertLast(21);
+
+linkedList.DisplayList();
+
+
+
